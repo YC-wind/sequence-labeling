@@ -26,3 +26,14 @@
    git push -f origin master
 --------------------- 
 
+find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch
+
+echo .DS_Store >> ~/.gitignore
+
+git add --all
+
+git commit -m '.DS_Store banished!'
+
+
+find . -name '*.DS_Store' -type f -delete
+
